@@ -1,0 +1,23 @@
+name: "JIRA Version Creator"
+description: "Creates a version in a JIRA project"
+author: Luis Santos <luis.santos@teampinic.com>
+branding:
+  icon: "hash"
+  color: "red"
+inputs:
+  host:
+    required: true
+  username:
+    required: true
+  password:
+    required: true
+  project:
+    required: true
+  version:
+    required: true
+  released:
+    required: false
+    default: true
+runs:
+  using: "node12"
+  main: "dist/index.js"
